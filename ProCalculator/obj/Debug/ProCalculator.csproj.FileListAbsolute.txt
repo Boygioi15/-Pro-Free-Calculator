@@ -1,0 +1,10 @@
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\bin\Debug\ProCalculator.exe.config
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\bin\Debug\ProCalculator.exe
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\bin\Debug\ProCalculator.pdb
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.csproj.AssemblyReference.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.Properties.Resources.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.StandardCalculator.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.csproj.GenerateResource.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.csproj.CoreCompileInputs.cache
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.exe
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.pdb
