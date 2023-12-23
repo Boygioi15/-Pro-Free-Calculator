@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorControls\StandardCalculatorControl.cs" />
+    <Compile Include="ClassLibraries\Expression.cs" />
+    <Compile Include="ClassLibraries\MatrixExpression.cs" />
+    <Compile Include="ClassLibraries\MyMatrix.cs" />
+    <Compile Include="CustomUserControls\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\CalculatorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StandardCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +93,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ClassLibraries\" />
-    <Folder Include="CustomUserControls\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

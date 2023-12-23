@@ -30,7 +30,6 @@
         {
             this.MainPanel_OpenModePanelButton = new System.Windows.Forms.PictureBox();
             this.MainPanel_CurrentModeTitle = new System.Windows.Forms.Label();
-            this.MainPanel_InputTextBox = new System.Windows.Forms.Label();
             this.MainPanel_OutputTextbox = new System.Windows.Forms.Label();
             this.MainPanel_OpenNumberPanelButton = new System.Windows.Forms.PictureBox();
             this.MainPanel_OpenFuncPanelButton = new System.Windows.Forms.PictureBox();
@@ -41,47 +40,50 @@
             this.MainPanel_DecorLine4 = new System.Windows.Forms.PictureBox();
             this.MainPanel_OnTopButton = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.BUGBUG = new System.Windows.Forms.Button();
+            this.MainPanel_NotifyOutput = new System.Windows.Forms.Label();
+            this.MainPanel_PromptUserToEnter = new System.Windows.Forms.Label();
             this.NumberPanel = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.CTRL_Ac = new System.Windows.Forms.Button();
+            this.NUMB_7 = new System.Windows.Forms.Button();
+            this.NUMB_4 = new System.Windows.Forms.Button();
+            this.NUMB_1 = new System.Windows.Forms.Button();
+            this.NUMB_0 = new System.Windows.Forms.Button();
+            this.FUNC_Percentage = new System.Windows.Forms.Button();
+            this.NUMB_8 = new System.Windows.Forms.Button();
+            this.NUMB_5 = new System.Windows.Forms.Button();
+            this.NUMB_2 = new System.Windows.Forms.Button();
+            this.MISC_Dot = new System.Windows.Forms.Button();
+            this.CTRL_Del = new System.Windows.Forms.Button();
+            this.NUMB_9 = new System.Windows.Forms.Button();
+            this.NUMB_6 = new System.Windows.Forms.Button();
+            this.NUMB_3 = new System.Windows.Forms.Button();
+            this.MISC_Ans = new System.Windows.Forms.Button();
+            this.OPER_Div = new System.Windows.Forms.Button();
+            this.OPER_Mul = new System.Windows.Forms.Button();
+            this.OPER_Sub = new System.Windows.Forms.Button();
+            this.OPER_Plus = new System.Windows.Forms.Button();
+            this.CTRL_Equal = new System.Windows.Forms.Button();
+            this.FUNC_Sin = new System.Windows.Forms.Button();
+            this.FunctionPanel = new System.Windows.Forms.Panel();
+            this.STATE_Degree = new System.Windows.Forms.Button();
+            this.FUNC_Not = new System.Windows.Forms.Button();
+            this.FUNC_Ln = new System.Windows.Forms.Button();
+            this.STATE_Radian = new System.Windows.Forms.Button();
+            this.FUNC_Sqrt = new System.Windows.Forms.Button();
+            this.FUNC_Logarit = new System.Windows.Forms.Button();
+            this.STATE_INV = new System.Windows.Forms.Button();
+            this.FUNC_Pow = new System.Windows.Forms.Button();
+            this.FUNC_Tan = new System.Windows.Forms.Button();
+            this.FUNC_EulerNumber = new System.Windows.Forms.Button();
+            this.MISC_CloseBracket = new System.Windows.Forms.Button();
+            this.FUNC_Cos = new System.Windows.Forms.Button();
+            this.FUNC_Pi = new System.Windows.Forms.Button();
+            this.MISC_OpenBracket = new System.Windows.Forms.Button();
             this.MemoryPanel = new System.Windows.Forms.Panel();
             this.MemoryPanel_DecorLine1 = new System.Windows.Forms.PictureBox();
             this.MemoryPanel_Title = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MainPanel_InputTextBox = new CustomUserControls.CalculatorTextBox.CalculatorTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenModePanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenNumberPanelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFuncPanelButton)).BeginInit();
@@ -93,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OnTopButton)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.NumberPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.FunctionPanel.SuspendLayout();
             this.MemoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemoryPanel_DecorLine1)).BeginInit();
             this.SuspendLayout();
@@ -118,23 +120,13 @@
             this.MainPanel_CurrentModeTitle.TabIndex = 1;
             this.MainPanel_CurrentModeTitle.Text = "Standard";
             // 
-            // MainPanel_InputTextBox
-            // 
-            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 100);
-            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
-            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(380, 33);
-            this.MainPanel_InputTextBox.TabIndex = 2;
-            // 
             // MainPanel_OutputTextbox
             // 
             this.MainPanel_OutputTextbox.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(78, 147);
+            this.MainPanel_OutputTextbox.Location = new System.Drawing.Point(29, 147);
             this.MainPanel_OutputTextbox.Name = "MainPanel_OutputTextbox";
-            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(329, 59);
+            this.MainPanel_OutputTextbox.Size = new System.Drawing.Size(378, 59);
             this.MainPanel_OutputTextbox.TabIndex = 3;
-            this.MainPanel_OutputTextbox.Text = "0.11111111111";
             this.MainPanel_OutputTextbox.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainPanel_OpenNumberPanelButton
@@ -221,390 +213,492 @@
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MainPanel.Controls.Add(this.textBox1);
+            this.MainPanel.Controls.Add(this.BUGBUG);
             this.MainPanel.Controls.Add(this.MainPanel_OnTopButton);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine1);
-            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine2);
             this.MainPanel.Controls.Add(this.MainPanel_DecorLine3);
-            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
             this.MainPanel.Controls.Add(this.MainPanel_OpenMemoryPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_OpenFuncPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_OpenNumberPanelButton);
             this.MainPanel.Controls.Add(this.MainPanel_CurrentModeTitle);
             this.MainPanel.Controls.Add(this.MainPanel_OpenModePanelButton);
+            this.MainPanel.Controls.Add(this.MainPanel_NotifyOutput);
+            this.MainPanel.Controls.Add(this.MainPanel_OutputTextbox);
+            this.MainPanel.Controls.Add(this.MainPanel_PromptUserToEnter);
+            this.MainPanel.Controls.Add(this.MainPanel_InputTextBox);
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(415, 275);
             this.MainPanel.TabIndex = 12;
             // 
+            // BUGBUG
+            // 
+            this.BUGBUG.Location = new System.Drawing.Point(80, 235);
+            this.BUGBUG.Name = "BUGBUG";
+            this.BUGBUG.Size = new System.Drawing.Size(97, 35);
+            this.BUGBUG.TabIndex = 0;
+            this.BUGBUG.Text = "BUGCHECK";
+            this.BUGBUG.UseVisualStyleBackColor = true;
+            this.BUGBUG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BUGBUG_MouseClick);
+            // 
+            // MainPanel_NotifyOutput
+            // 
+            this.MainPanel_NotifyOutput.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_NotifyOutput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MainPanel_NotifyOutput.Location = new System.Drawing.Point(29, 147);
+            this.MainPanel_NotifyOutput.Name = "MainPanel_NotifyOutput";
+            this.MainPanel_NotifyOutput.Size = new System.Drawing.Size(378, 59);
+            this.MainPanel_NotifyOutput.TabIndex = 14;
+            this.MainPanel_NotifyOutput.Text = "Output here...";
+            this.MainPanel_NotifyOutput.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // MainPanel_PromptUserToEnter
+            // 
+            this.MainPanel_PromptUserToEnter.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_PromptUserToEnter.ForeColor = System.Drawing.Color.DimGray;
+            this.MainPanel_PromptUserToEnter.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_PromptUserToEnter.Name = "MainPanel_PromptUserToEnter";
+            this.MainPanel_PromptUserToEnter.Size = new System.Drawing.Size(366, 33);
+            this.MainPanel_PromptUserToEnter.TabIndex = 13;
+            this.MainPanel_PromptUserToEnter.Text = "Enter expression here...";
+            // 
             // NumberPanel
             // 
             this.NumberPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.NumberPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NumberPanel.Controls.Add(this.button16);
-            this.NumberPanel.Controls.Add(this.button17);
-            this.NumberPanel.Controls.Add(this.button18);
-            this.NumberPanel.Controls.Add(this.button19);
-            this.NumberPanel.Controls.Add(this.button20);
-            this.NumberPanel.Controls.Add(this.button11);
-            this.NumberPanel.Controls.Add(this.button12);
-            this.NumberPanel.Controls.Add(this.button13);
-            this.NumberPanel.Controls.Add(this.button14);
-            this.NumberPanel.Controls.Add(this.button15);
-            this.NumberPanel.Controls.Add(this.button6);
-            this.NumberPanel.Controls.Add(this.button7);
-            this.NumberPanel.Controls.Add(this.button8);
-            this.NumberPanel.Controls.Add(this.button9);
-            this.NumberPanel.Controls.Add(this.button10);
-            this.NumberPanel.Controls.Add(this.button5);
-            this.NumberPanel.Controls.Add(this.button3);
-            this.NumberPanel.Controls.Add(this.button4);
-            this.NumberPanel.Controls.Add(this.button2);
-            this.NumberPanel.Controls.Add(this.button1);
-            this.NumberPanel.Location = new System.Drawing.Point(0, 284);
+            this.NumberPanel.Controls.Add(this.CTRL_Ac);
+            this.NumberPanel.Controls.Add(this.NUMB_7);
+            this.NumberPanel.Controls.Add(this.NUMB_4);
+            this.NumberPanel.Controls.Add(this.NUMB_1);
+            this.NumberPanel.Controls.Add(this.NUMB_0);
+            this.NumberPanel.Controls.Add(this.FUNC_Percentage);
+            this.NumberPanel.Controls.Add(this.NUMB_8);
+            this.NumberPanel.Controls.Add(this.NUMB_5);
+            this.NumberPanel.Controls.Add(this.NUMB_2);
+            this.NumberPanel.Controls.Add(this.MISC_Dot);
+            this.NumberPanel.Controls.Add(this.CTRL_Del);
+            this.NumberPanel.Controls.Add(this.NUMB_9);
+            this.NumberPanel.Controls.Add(this.NUMB_6);
+            this.NumberPanel.Controls.Add(this.NUMB_3);
+            this.NumberPanel.Controls.Add(this.MISC_Ans);
+            this.NumberPanel.Controls.Add(this.OPER_Div);
+            this.NumberPanel.Controls.Add(this.OPER_Mul);
+            this.NumberPanel.Controls.Add(this.OPER_Sub);
+            this.NumberPanel.Controls.Add(this.OPER_Plus);
+            this.NumberPanel.Controls.Add(this.CTRL_Equal);
+            this.NumberPanel.Location = new System.Drawing.Point(0, 447);
             this.NumberPanel.Name = "NumberPanel";
             this.NumberPanel.Size = new System.Drawing.Size(415, 330);
             this.NumberPanel.TabIndex = 13;
             // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(11, 8);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(95, 58);
-            this.button16.TabIndex = 19;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(11, 72);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(95, 58);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(11, 136);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(95, 58);
-            this.button18.TabIndex = 17;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(11, 200);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(95, 58);
-            this.button19.TabIndex = 16;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(11, 264);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(95, 58);
-            this.button20.TabIndex = 15;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(111, 8);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(95, 58);
-            this.button11.TabIndex = 14;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(111, 72);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(95, 58);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(111, 136);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(95, 58);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(111, 200);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(95, 58);
-            this.button14.TabIndex = 11;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(111, 264);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(95, 58);
-            this.button15.TabIndex = 10;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(212, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 58);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(212, 72);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(95, 58);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(212, 136);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(95, 58);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(212, 200);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(95, 58);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(212, 264);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(95, 58);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(313, 8);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 58);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(313, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 58);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(313, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 58);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(313, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(313, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button33);
-            this.panel1.Controls.Add(this.button34);
-            this.panel1.Controls.Add(this.button35);
-            this.panel1.Controls.Add(this.button30);
-            this.panel1.Controls.Add(this.button31);
-            this.panel1.Controls.Add(this.button32);
-            this.panel1.Controls.Add(this.button27);
-            this.panel1.Controls.Add(this.button28);
-            this.panel1.Controls.Add(this.button29);
-            this.panel1.Controls.Add(this.button24);
-            this.panel1.Controls.Add(this.button25);
-            this.panel1.Controls.Add(this.button26);
-            this.panel1.Controls.Add(this.button23);
-            this.panel1.Controls.Add(this.button22);
-            this.panel1.Controls.Add(this.button21);
-            this.panel1.Location = new System.Drawing.Point(0, 624);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 160);
-            this.panel1.TabIndex = 14;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(332, 106);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 40);
-            this.button33.TabIndex = 34;
-            this.button33.Text = "button33";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(332, 60);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 40);
-            this.button34.TabIndex = 33;
-            this.button34.Text = "button34";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(332, 14);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 40);
-            this.button35.TabIndex = 32;
-            this.button35.Text = "button35";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(251, 106);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 40);
-            this.button30.TabIndex = 31;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(251, 60);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 40);
-            this.button31.TabIndex = 30;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(251, 14);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 40);
-            this.button32.TabIndex = 29;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(167, 106);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 40);
-            this.button27.TabIndex = 28;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(167, 60);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 40);
-            this.button28.TabIndex = 27;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(167, 14);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 40);
-            this.button29.TabIndex = 26;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(86, 106);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 40);
-            this.button24.TabIndex = 25;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(86, 60);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 40);
-            this.button25.TabIndex = 24;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(86, 14);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 40);
-            this.button26.TabIndex = 23;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(5, 106);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 40);
-            this.button23.TabIndex = 22;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(5, 60);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 40);
-            this.button22.TabIndex = 21;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(5, 14);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 40);
-            this.button21.TabIndex = 20;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
+            // CTRL_Ac
+            // 
+            this.CTRL_Ac.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Ac.Location = new System.Drawing.Point(8, 8);
+            this.CTRL_Ac.Name = "CTRL_Ac";
+            this.CTRL_Ac.Size = new System.Drawing.Size(95, 58);
+            this.CTRL_Ac.TabIndex = 19;
+            this.CTRL_Ac.Text = "C";
+            this.CTRL_Ac.UseVisualStyleBackColor = true;
+            // 
+            // NUMB_7
+            // 
+            this.NUMB_7.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_7.Location = new System.Drawing.Point(8, 72);
+            this.NUMB_7.Name = "NUMB_7";
+            this.NUMB_7.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_7.TabIndex = 18;
+            this.NUMB_7.Text = "7";
+            this.NUMB_7.UseVisualStyleBackColor = true;
+            this.NUMB_7.Click += new System.EventHandler(this.NUMB_7_Click);
+            // 
+            // NUMB_4
+            // 
+            this.NUMB_4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_4.Location = new System.Drawing.Point(8, 136);
+            this.NUMB_4.Name = "NUMB_4";
+            this.NUMB_4.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_4.TabIndex = 17;
+            this.NUMB_4.Text = "4";
+            this.NUMB_4.UseVisualStyleBackColor = true;
+            this.NUMB_4.Click += new System.EventHandler(this.NUMB_4_Click);
+            // 
+            // NUMB_1
+            // 
+            this.NUMB_1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_1.Location = new System.Drawing.Point(8, 200);
+            this.NUMB_1.Name = "NUMB_1";
+            this.NUMB_1.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_1.TabIndex = 16;
+            this.NUMB_1.Text = "1";
+            this.NUMB_1.UseVisualStyleBackColor = true;
+            this.NUMB_1.Click += new System.EventHandler(this.NUMB_1_Click);
+            // 
+            // NUMB_0
+            // 
+            this.NUMB_0.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_0.Location = new System.Drawing.Point(8, 264);
+            this.NUMB_0.Name = "NUMB_0";
+            this.NUMB_0.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_0.TabIndex = 15;
+            this.NUMB_0.Text = "0";
+            this.NUMB_0.UseVisualStyleBackColor = true;
+            this.NUMB_0.Click += new System.EventHandler(this.NUMB_0_Click);
+            // 
+            // FUNC_Percentage
+            // 
+            this.FUNC_Percentage.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Percentage.Location = new System.Drawing.Point(108, 8);
+            this.FUNC_Percentage.Name = "FUNC_Percentage";
+            this.FUNC_Percentage.Size = new System.Drawing.Size(95, 58);
+            this.FUNC_Percentage.TabIndex = 14;
+            this.FUNC_Percentage.Text = "%";
+            this.FUNC_Percentage.UseVisualStyleBackColor = true;
+            this.FUNC_Percentage.Click += new System.EventHandler(this.FUNC_Percentage_Click);
+            // 
+            // NUMB_8
+            // 
+            this.NUMB_8.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_8.Location = new System.Drawing.Point(108, 72);
+            this.NUMB_8.Name = "NUMB_8";
+            this.NUMB_8.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_8.TabIndex = 13;
+            this.NUMB_8.Text = "8";
+            this.NUMB_8.UseVisualStyleBackColor = true;
+            this.NUMB_8.Click += new System.EventHandler(this.NUMB_8_Click);
+            // 
+            // NUMB_5
+            // 
+            this.NUMB_5.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_5.Location = new System.Drawing.Point(108, 136);
+            this.NUMB_5.Name = "NUMB_5";
+            this.NUMB_5.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_5.TabIndex = 12;
+            this.NUMB_5.Text = "5";
+            this.NUMB_5.UseVisualStyleBackColor = true;
+            this.NUMB_5.Click += new System.EventHandler(this.NUMB_5_Click);
+            // 
+            // NUMB_2
+            // 
+            this.NUMB_2.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_2.Location = new System.Drawing.Point(108, 200);
+            this.NUMB_2.Name = "NUMB_2";
+            this.NUMB_2.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_2.TabIndex = 11;
+            this.NUMB_2.Text = "2";
+            this.NUMB_2.UseVisualStyleBackColor = true;
+            this.NUMB_2.Click += new System.EventHandler(this.NUMB_2_Click);
+            // 
+            // MISC_Dot
+            // 
+            this.MISC_Dot.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Dot.Location = new System.Drawing.Point(108, 264);
+            this.MISC_Dot.Name = "MISC_Dot";
+            this.MISC_Dot.Size = new System.Drawing.Size(95, 58);
+            this.MISC_Dot.TabIndex = 10;
+            this.MISC_Dot.Text = ".";
+            this.MISC_Dot.UseVisualStyleBackColor = true;
+            this.MISC_Dot.Click += new System.EventHandler(this.MISC_Dot_Click);
+            // 
+            // CTRL_Del
+            // 
+            this.CTRL_Del.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Del.Location = new System.Drawing.Point(209, 8);
+            this.CTRL_Del.Name = "CTRL_Del";
+            this.CTRL_Del.Size = new System.Drawing.Size(95, 58);
+            this.CTRL_Del.TabIndex = 9;
+            this.CTRL_Del.Text = "DEL";
+            this.CTRL_Del.UseVisualStyleBackColor = true;
+            this.CTRL_Del.Click += new System.EventHandler(this.CTRL_Del_Click);
+            // 
+            // NUMB_9
+            // 
+            this.NUMB_9.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_9.Location = new System.Drawing.Point(209, 72);
+            this.NUMB_9.Name = "NUMB_9";
+            this.NUMB_9.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_9.TabIndex = 8;
+            this.NUMB_9.Text = "9";
+            this.NUMB_9.UseVisualStyleBackColor = true;
+            this.NUMB_9.Click += new System.EventHandler(this.NUMB_9_Click);
+            // 
+            // NUMB_6
+            // 
+            this.NUMB_6.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_6.Location = new System.Drawing.Point(209, 136);
+            this.NUMB_6.Name = "NUMB_6";
+            this.NUMB_6.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_6.TabIndex = 7;
+            this.NUMB_6.Text = "6";
+            this.NUMB_6.UseVisualStyleBackColor = true;
+            this.NUMB_6.Click += new System.EventHandler(this.NUMB_6_Click);
+            // 
+            // NUMB_3
+            // 
+            this.NUMB_3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUMB_3.Location = new System.Drawing.Point(209, 200);
+            this.NUMB_3.Name = "NUMB_3";
+            this.NUMB_3.Size = new System.Drawing.Size(95, 58);
+            this.NUMB_3.TabIndex = 6;
+            this.NUMB_3.Text = "3";
+            this.NUMB_3.UseVisualStyleBackColor = true;
+            this.NUMB_3.Click += new System.EventHandler(this.NUMB_3_Click);
+            // 
+            // MISC_Ans
+            // 
+            this.MISC_Ans.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_Ans.Location = new System.Drawing.Point(209, 264);
+            this.MISC_Ans.Name = "MISC_Ans";
+            this.MISC_Ans.Size = new System.Drawing.Size(95, 58);
+            this.MISC_Ans.TabIndex = 5;
+            this.MISC_Ans.Text = "Ans";
+            this.MISC_Ans.UseVisualStyleBackColor = true;
+            // 
+            // OPER_Div
+            // 
+            this.OPER_Div.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Div.Location = new System.Drawing.Point(310, 8);
+            this.OPER_Div.Name = "OPER_Div";
+            this.OPER_Div.Size = new System.Drawing.Size(95, 58);
+            this.OPER_Div.TabIndex = 4;
+            this.OPER_Div.Text = "÷";
+            this.OPER_Div.UseVisualStyleBackColor = true;
+            this.OPER_Div.Click += new System.EventHandler(this.OPER_Div_Click);
+            // 
+            // OPER_Mul
+            // 
+            this.OPER_Mul.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Mul.Location = new System.Drawing.Point(310, 72);
+            this.OPER_Mul.Name = "OPER_Mul";
+            this.OPER_Mul.Size = new System.Drawing.Size(95, 58);
+            this.OPER_Mul.TabIndex = 3;
+            this.OPER_Mul.Text = "x";
+            this.OPER_Mul.UseVisualStyleBackColor = true;
+            this.OPER_Mul.Click += new System.EventHandler(this.OPER_Mul_Click);
+            // 
+            // OPER_Sub
+            // 
+            this.OPER_Sub.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Sub.Location = new System.Drawing.Point(310, 136);
+            this.OPER_Sub.Name = "OPER_Sub";
+            this.OPER_Sub.Size = new System.Drawing.Size(95, 58);
+            this.OPER_Sub.TabIndex = 2;
+            this.OPER_Sub.Text = "-";
+            this.OPER_Sub.UseVisualStyleBackColor = true;
+            this.OPER_Sub.Click += new System.EventHandler(this.OPER_Sub_Click);
+            // 
+            // OPER_Plus
+            // 
+            this.OPER_Plus.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPER_Plus.Location = new System.Drawing.Point(310, 200);
+            this.OPER_Plus.Name = "OPER_Plus";
+            this.OPER_Plus.Size = new System.Drawing.Size(95, 58);
+            this.OPER_Plus.TabIndex = 1;
+            this.OPER_Plus.Text = "+";
+            this.OPER_Plus.UseVisualStyleBackColor = true;
+            this.OPER_Plus.Click += new System.EventHandler(this.OPER_Plus_Click);
+            // 
+            // CTRL_Equal
+            // 
+            this.CTRL_Equal.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTRL_Equal.Location = new System.Drawing.Point(310, 264);
+            this.CTRL_Equal.Name = "CTRL_Equal";
+            this.CTRL_Equal.Size = new System.Drawing.Size(95, 58);
+            this.CTRL_Equal.TabIndex = 0;
+            this.CTRL_Equal.Text = "=";
+            this.CTRL_Equal.UseVisualStyleBackColor = true;
+            this.CTRL_Equal.Click += new System.EventHandler(this.CTRL_Equal_Click);
+            // 
+            // FUNC_Sin
+            // 
+            this.FUNC_Sin.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Sin.Location = new System.Drawing.Point(5, 14);
+            this.FUNC_Sin.Name = "FUNC_Sin";
+            this.FUNC_Sin.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Sin.TabIndex = 20;
+            this.FUNC_Sin.Text = "sin";
+            this.FUNC_Sin.UseVisualStyleBackColor = true;
+            this.FUNC_Sin.Click += new System.EventHandler(this.FUNC_Sin_Click);
+            // 
+            // FunctionPanel
+            // 
+            this.FunctionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.FunctionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FunctionPanel.Controls.Add(this.STATE_Degree);
+            this.FunctionPanel.Controls.Add(this.FUNC_Not);
+            this.FunctionPanel.Controls.Add(this.FUNC_Ln);
+            this.FunctionPanel.Controls.Add(this.STATE_Radian);
+            this.FunctionPanel.Controls.Add(this.FUNC_Sqrt);
+            this.FunctionPanel.Controls.Add(this.FUNC_Logarit);
+            this.FunctionPanel.Controls.Add(this.STATE_INV);
+            this.FunctionPanel.Controls.Add(this.FUNC_Pow);
+            this.FunctionPanel.Controls.Add(this.FUNC_Tan);
+            this.FunctionPanel.Controls.Add(this.FUNC_EulerNumber);
+            this.FunctionPanel.Controls.Add(this.MISC_CloseBracket);
+            this.FunctionPanel.Controls.Add(this.FUNC_Cos);
+            this.FunctionPanel.Controls.Add(this.FUNC_Pi);
+            this.FunctionPanel.Controls.Add(this.MISC_OpenBracket);
+            this.FunctionPanel.Controls.Add(this.FUNC_Sin);
+            this.FunctionPanel.Location = new System.Drawing.Point(0, 281);
+            this.FunctionPanel.Name = "FunctionPanel";
+            this.FunctionPanel.Size = new System.Drawing.Size(415, 160);
+            this.FunctionPanel.TabIndex = 14;
+            // 
+            // STATE_Degree
+            // 
+            this.STATE_Degree.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Degree.Location = new System.Drawing.Point(329, 106);
+            this.STATE_Degree.Name = "STATE_Degree";
+            this.STATE_Degree.Size = new System.Drawing.Size(75, 40);
+            this.STATE_Degree.TabIndex = 34;
+            this.STATE_Degree.Text = "DEG";
+            this.STATE_Degree.UseVisualStyleBackColor = true;
+            this.STATE_Degree.Click += new System.EventHandler(this.STATE_Degree_Click);
+            // 
+            // FUNC_Not
+            // 
+            this.FUNC_Not.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Not.Location = new System.Drawing.Point(329, 60);
+            this.FUNC_Not.Name = "FUNC_Not";
+            this.FUNC_Not.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Not.TabIndex = 33;
+            this.FUNC_Not.Text = "!";
+            this.FUNC_Not.UseVisualStyleBackColor = true;
+            this.FUNC_Not.Click += new System.EventHandler(this.FUNC_Not_Click);
+            // 
+            // FUNC_Ln
+            // 
+            this.FUNC_Ln.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Ln.Location = new System.Drawing.Point(329, 14);
+            this.FUNC_Ln.Name = "FUNC_Ln";
+            this.FUNC_Ln.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Ln.TabIndex = 32;
+            this.FUNC_Ln.Text = "ln";
+            this.FUNC_Ln.UseVisualStyleBackColor = true;
+            this.FUNC_Ln.Click += new System.EventHandler(this.FUNC_Ln_Click);
+            // 
+            // STATE_Radian
+            // 
+            this.STATE_Radian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(239)))), ((int)(((byte)(139)))));
+            this.STATE_Radian.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_Radian.Location = new System.Drawing.Point(248, 106);
+            this.STATE_Radian.Name = "STATE_Radian";
+            this.STATE_Radian.Size = new System.Drawing.Size(75, 40);
+            this.STATE_Radian.TabIndex = 31;
+            this.STATE_Radian.Text = "RAD";
+            this.STATE_Radian.UseVisualStyleBackColor = false;
+            this.STATE_Radian.Click += new System.EventHandler(this.STATE_Radian_Click);
+            // 
+            // FUNC_Sqrt
+            // 
+            this.FUNC_Sqrt.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Sqrt.Location = new System.Drawing.Point(248, 60);
+            this.FUNC_Sqrt.Name = "FUNC_Sqrt";
+            this.FUNC_Sqrt.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Sqrt.TabIndex = 30;
+            this.FUNC_Sqrt.Text = "√";
+            this.FUNC_Sqrt.UseVisualStyleBackColor = true;
+            this.FUNC_Sqrt.Click += new System.EventHandler(this.FUNC_Sqrt_Click);
+            // 
+            // FUNC_Logarit
+            // 
+            this.FUNC_Logarit.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Logarit.Location = new System.Drawing.Point(248, 14);
+            this.FUNC_Logarit.Name = "FUNC_Logarit";
+            this.FUNC_Logarit.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Logarit.TabIndex = 29;
+            this.FUNC_Logarit.Text = "log";
+            this.FUNC_Logarit.UseVisualStyleBackColor = true;
+            this.FUNC_Logarit.Click += new System.EventHandler(this.FUNC_Logarit_Click);
+            // 
+            // STATE_INV
+            // 
+            this.STATE_INV.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STATE_INV.Location = new System.Drawing.Point(167, 106);
+            this.STATE_INV.Name = "STATE_INV";
+            this.STATE_INV.Size = new System.Drawing.Size(75, 40);
+            this.STATE_INV.TabIndex = 28;
+            this.STATE_INV.Text = "INV";
+            this.STATE_INV.UseVisualStyleBackColor = true;
+            this.STATE_INV.Click += new System.EventHandler(this.STATE_INV_Click);
+            // 
+            // FUNC_Pow
+            // 
+            this.FUNC_Pow.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Pow.Location = new System.Drawing.Point(167, 60);
+            this.FUNC_Pow.Name = "FUNC_Pow";
+            this.FUNC_Pow.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Pow.TabIndex = 27;
+            this.FUNC_Pow.Text = "^";
+            this.FUNC_Pow.UseVisualStyleBackColor = true;
+            this.FUNC_Pow.Click += new System.EventHandler(this.FUNC_Pow_Click);
+            // 
+            // FUNC_Tan
+            // 
+            this.FUNC_Tan.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Tan.Location = new System.Drawing.Point(167, 14);
+            this.FUNC_Tan.Name = "FUNC_Tan";
+            this.FUNC_Tan.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Tan.TabIndex = 26;
+            this.FUNC_Tan.Text = "tan";
+            this.FUNC_Tan.UseVisualStyleBackColor = true;
+            this.FUNC_Tan.Click += new System.EventHandler(this.FUNC_Tan_Click);
+            // 
+            // FUNC_EulerNumber
+            // 
+            this.FUNC_EulerNumber.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_EulerNumber.Location = new System.Drawing.Point(86, 106);
+            this.FUNC_EulerNumber.Name = "FUNC_EulerNumber";
+            this.FUNC_EulerNumber.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_EulerNumber.TabIndex = 25;
+            this.FUNC_EulerNumber.Text = "e";
+            this.FUNC_EulerNumber.UseVisualStyleBackColor = true;
+            this.FUNC_EulerNumber.Click += new System.EventHandler(this.FUNC_EulerNumber_Click);
+            // 
+            // MISC_CloseBracket
+            // 
+            this.MISC_CloseBracket.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_CloseBracket.Location = new System.Drawing.Point(86, 60);
+            this.MISC_CloseBracket.Name = "MISC_CloseBracket";
+            this.MISC_CloseBracket.Size = new System.Drawing.Size(75, 40);
+            this.MISC_CloseBracket.TabIndex = 24;
+            this.MISC_CloseBracket.Text = ")";
+            this.MISC_CloseBracket.UseVisualStyleBackColor = true;
+            this.MISC_CloseBracket.Click += new System.EventHandler(this.MISC_CloseBracket_Click);
+            // 
+            // FUNC_Cos
+            // 
+            this.FUNC_Cos.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Cos.Location = new System.Drawing.Point(86, 14);
+            this.FUNC_Cos.Name = "FUNC_Cos";
+            this.FUNC_Cos.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Cos.TabIndex = 23;
+            this.FUNC_Cos.Text = "cos";
+            this.FUNC_Cos.UseVisualStyleBackColor = true;
+            this.FUNC_Cos.Click += new System.EventHandler(this.FUNC_Cos_Click);
+            // 
+            // FUNC_Pi
+            // 
+            this.FUNC_Pi.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FUNC_Pi.Location = new System.Drawing.Point(5, 106);
+            this.FUNC_Pi.Name = "FUNC_Pi";
+            this.FUNC_Pi.Size = new System.Drawing.Size(75, 40);
+            this.FUNC_Pi.TabIndex = 22;
+            this.FUNC_Pi.Text = "𝝅";
+            this.FUNC_Pi.UseVisualStyleBackColor = true;
+            this.FUNC_Pi.Click += new System.EventHandler(this.FUNC_Pi_Click);
+            // 
+            // MISC_OpenBracket
+            // 
+            this.MISC_OpenBracket.Font = new System.Drawing.Font("Comic Sans MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MISC_OpenBracket.Location = new System.Drawing.Point(5, 60);
+            this.MISC_OpenBracket.Name = "MISC_OpenBracket";
+            this.MISC_OpenBracket.Size = new System.Drawing.Size(75, 40);
+            this.MISC_OpenBracket.TabIndex = 21;
+            this.MISC_OpenBracket.Text = "(";
+            this.MISC_OpenBracket.UseVisualStyleBackColor = true;
+            this.MISC_OpenBracket.Click += new System.EventHandler(this.MISC_OpenBracket_Click);
             // 
             // MemoryPanel
             // 
@@ -636,32 +730,40 @@
             this.MemoryPanel_Title.TabIndex = 0;
             this.MemoryPanel_Title.Text = "Memory";
             // 
-            // textBox1
+            // MainPanel_InputTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(29, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 33);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Enter expression...";
+            this.MainPanel_InputTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.MainPanel_InputTextBox.BlinkingCursorWidth = 1;
+            this.MainPanel_InputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MainPanel_InputTextBox.CurrentCursorPosition = 0;
+            this.MainPanel_InputTextBox.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainPanel_InputTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MainPanel_InputTextBox.Location = new System.Drawing.Point(29, 97);
+            this.MainPanel_InputTextBox.Name = "MainPanel_InputTextBox";
+            this.MainPanel_InputTextBox.ReadOnly = true;
+            this.MainPanel_InputTextBox.Size = new System.Drawing.Size(366, 33);
+            this.MainPanel_InputTextBox.TabIndex = 15;
+            this.MainPanel_InputTextBox.TickInterval = 700;
             // 
             // StandardCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(701, 784);
             this.Controls.Add(this.MemoryPanel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.FunctionPanel);
             this.Controls.Add(this.NumberPanel);
             this.Controls.Add(this.MainPanel_DecorLine4);
             this.Controls.Add(this.MainPanel);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "StandardCalculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.StandardCalculator_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StandardCalculator_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenModePanelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenNumberPanelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel_OpenFuncPanelButton)).EndInit();
@@ -674,7 +776,7 @@
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             this.NumberPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.FunctionPanel.ResumeLayout(false);
             this.MemoryPanel.ResumeLayout(false);
             this.MemoryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemoryPanel_DecorLine1)).EndInit();
@@ -686,7 +788,6 @@
 
         internal System.Windows.Forms.PictureBox MainPanel_OpenModePanelButton;
         internal System.Windows.Forms.Label MainPanel_CurrentModeTitle;
-        internal System.Windows.Forms.Label MainPanel_InputTextBox;
         internal System.Windows.Forms.Label MainPanel_OutputTextbox;
         internal System.Windows.Forms.PictureBox MainPanel_OpenNumberPanelButton;
         internal System.Windows.Forms.PictureBox MainPanel_OpenFuncPanelButton;
@@ -698,46 +799,53 @@
         internal System.Windows.Forms.PictureBox MainPanel_OnTopButton;
         internal System.Windows.Forms.Panel MainPanel;
         internal System.Windows.Forms.Panel NumberPanel;
-        internal System.Windows.Forms.Button button5;
-        internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button4;
-        internal System.Windows.Forms.Button button2;
-        internal System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.Button button16;
-        internal System.Windows.Forms.Button button17;
-        internal System.Windows.Forms.Button button18;
-        internal System.Windows.Forms.Button button19;
-        internal System.Windows.Forms.Button button20;
-        internal System.Windows.Forms.Button button11;
-        internal System.Windows.Forms.Button button12;
-        internal System.Windows.Forms.Button button13;
-        internal System.Windows.Forms.Button button14;
-        internal System.Windows.Forms.Button button15;
-        internal System.Windows.Forms.Button button6;
-        internal System.Windows.Forms.Button button7;
-        internal System.Windows.Forms.Button button8;
-        internal System.Windows.Forms.Button button9;
-        internal System.Windows.Forms.Button button10;
-        internal System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.Button button33;
-        internal System.Windows.Forms.Button button34;
-        internal System.Windows.Forms.Button button35;
-        internal System.Windows.Forms.Button button30;
-        internal System.Windows.Forms.Button button31;
-        internal System.Windows.Forms.Button button32;
-        internal System.Windows.Forms.Button button27;
-        internal System.Windows.Forms.Button button28;
-        internal System.Windows.Forms.Button button29;
-        internal System.Windows.Forms.Button button24;
-        internal System.Windows.Forms.Button button25;
-        internal System.Windows.Forms.Button button26;
-        internal System.Windows.Forms.Button button23;
-        internal System.Windows.Forms.Button button22;
-        internal System.Windows.Forms.Button button21;
+        internal System.Windows.Forms.Panel FunctionPanel;
+     
+        internal System.Windows.Forms.Button OPER_Div;
+        internal System.Windows.Forms.Button OPER_Mul;
+        internal System.Windows.Forms.Button OPER_Sub;
+        internal System.Windows.Forms.Button OPER_Plus;
+        internal System.Windows.Forms.Button CTRL_Equal;
+        internal System.Windows.Forms.Button CTRL_Ac;
+        internal System.Windows.Forms.Button NUMB_7;
+        internal System.Windows.Forms.Button NUMB_4;
+        internal System.Windows.Forms.Button NUMB_1;
+        internal System.Windows.Forms.Button NUMB_0;
+        internal System.Windows.Forms.Button FUNC_Percentage;
+        internal System.Windows.Forms.Button NUMB_8;
+        internal System.Windows.Forms.Button NUMB_5;
+        internal System.Windows.Forms.Button NUMB_2;
+        internal System.Windows.Forms.Button MISC_Dot;
+        internal System.Windows.Forms.Button CTRL_Del;
+        internal System.Windows.Forms.Button NUMB_9;
+        internal System.Windows.Forms.Button NUMB_6;
+        internal System.Windows.Forms.Button NUMB_3;
+        internal System.Windows.Forms.Button MISC_Ans;
+        internal System.Windows.Forms.Button STATE_Degree;
+        internal System.Windows.Forms.Button FUNC_Not;
+        internal System.Windows.Forms.Button FUNC_Ln;
+        internal System.Windows.Forms.Button STATE_Radian;
+        internal System.Windows.Forms.Button FUNC_Sqrt;
+        internal System.Windows.Forms.Button FUNC_Logarit;
+        internal System.Windows.Forms.Button STATE_INV;
+        internal System.Windows.Forms.Button FUNC_Pow;
+        internal System.Windows.Forms.Button FUNC_Tan;
+        internal System.Windows.Forms.Button FUNC_EulerNumber;
+        internal System.Windows.Forms.Button MISC_CloseBracket;
+        internal System.Windows.Forms.Button FUNC_Cos;
+        internal System.Windows.Forms.Button FUNC_Pi;
+        internal System.Windows.Forms.Button MISC_OpenBracket;
+        internal System.Windows.Forms.Button FUNC_Sin;
+        /// <summary>
+        /// 
+        /// </summary>
         internal System.Windows.Forms.Panel MemoryPanel;
         internal System.Windows.Forms.PictureBox MemoryPanel_DecorLine1;
         internal System.Windows.Forms.Label MemoryPanel_Title;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BUGBUG;
+        private System.Windows.Forms.Label MainPanel_PromptUserToEnter;
+        internal System.Windows.Forms.Label MainPanel_NotifyOutput;
+        internal CustomUserControls.CalculatorTextBox.CalculatorTextbox MainPanel_InputTextBox;
     }
 }
 
