@@ -10,10 +10,10 @@ namespace CustomUserControls.RoundedPanel
     partial class RoundedPanel : Panel
     {
 
-        int _borderWidth = 3;
-        Color _borderColor = Color.Black;
-        Color _interiorColor = Color.White;
-        int _arcSize = 15;
+        protected int _borderWidth = 3;
+        protected Color _borderColor = Color.Black;
+        protected Color _interiorColor = Color.White;
+        protected int _arcSize = 15;
 
         //only use odd number for consistency
         [Category("Border")]
@@ -24,9 +24,9 @@ namespace CustomUserControls.RoundedPanel
             {
                 if (value != _borderWidth)
                 {
-                    if (value < 1)
+                    if (value < 0)
                     {
-                        _borderWidth = 1;
+                        _borderWidth = 0;
                     }
                     _borderWidth = value;
                     Invalidate();
@@ -79,16 +79,28 @@ namespace CustomUserControls.RoundedPanel
         public RoundedPanel()
         {
             DoubleBuffered = true;
+            
         }
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 600;
+            isPlayingAnimation = false;
         }
         protected override void OnBackColorChanged(EventArgs e)
         {
             base.OnBackColorChanged(e);
             BackColor = Color.Transparent;
+        }
+
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            base.OnSizeChanged(e);
+            Invalidate();
+        }
+        protected override void OnLocationChanged(EventArgs e)
+        {
+            base.OnLocationChanged(e);
+            Invalidate();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -116,7 +128,10 @@ namespace CustomUserControls.RoundedPanel
             g.FillEllipse(b, ArcBotRight);
 
             //draw border
-
+            if (BorderWidth == 0)
+            {
+                return;
+            }
             Pen p = new Pen(BorderColor, _borderWidth);
             g.SmoothingMode = SmoothingMode.AntiAlias;
             //draw Border;
@@ -144,14 +159,51 @@ namespace CustomUserControls.RoundedPanel
             g.DrawArc(p, ArcBotLeft, 90, 90);
             g.DrawArc(p, ArcBotRight, 0, 90);
         }
+    }
+    //animation
+    partial class RoundedPanel : Panel
+    {
+        Timer animationTmr;
+        public bool isPlayingAnimation = false;
+        double realPosX, realPosY;
+        public void StartSliding(Point start, Point end, int duration, int deltaT)
+        {
+            if (isPlayingAnimation)
+            {
+                return;
+            }
+            int step = duration / deltaT;
+            double offsetXForEachStep = (end.X - start.X) / (double)step;
+            double offsetYForEachStep = (end.Y - start.Y) / (double)step;
 
-        protected override void OnLocationChanged(EventArgs e)
-        {
-            base.OnLocationChanged(e);
+            animationTmr = new Timer();
+            animationTmr.Interval = deltaT;
+            animationTmr.Tick += (sender, args) =>
+            {
+                realPosX += offsetXForEachStep;
+                realPosY += offsetYForEachStep;
+                Location = new Point((int)realPosX, (int)realPosY);
+                //finish
+                if (step <= 1)
+                {
+                    isPlayingAnimation = false;
+                    Location = end;
+                    animationTmr.Stop();
+                    animationTmr.Dispose(); 
+                }
+                step--;
+            };
+            Location = start;
+            realPosX = Location.X; 
+            realPosY = Location.Y;
+            isPlayingAnimation = true;
+            animationTmr.Enabled = true;
+            animationTmr.Start();
+            
         }
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
+        public void StopSliding() {
+            animationTmr.Stop();
+            isPlayingAnimation = false;
         }
     }
 }

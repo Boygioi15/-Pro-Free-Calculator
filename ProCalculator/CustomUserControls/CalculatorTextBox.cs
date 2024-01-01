@@ -100,6 +100,21 @@ namespace CustomUserControls.CalculatorTextBox
             }
         }
 
+        [Category("Blinking Cursor")]
+        public Color BlinkingCursorColor
+        {
+            get
+            {
+                return verticalBar.BackColor;
+            }
+            set
+            {
+                if (BlinkingCursorColor != value)
+                {
+                    verticalBar.BackColor = value;
+                }
+            }
+        }
         public CalculatorTextbox()
         {
             //v bar
@@ -115,8 +130,8 @@ namespace CustomUserControls.CalculatorTextBox
             tmr.Start();
 
             useToMeasureLength = new Label();
-            useToMeasureLength.Location = new Point(-6, 15);
-            useToMeasureLength.Font = new Font(Font.Name, (float)(Font.Size - 0.6));
+            useToMeasureLength.Location = new Point(-6, 20);
+            useToMeasureLength.Font = new Font(Font.Name, (float)(Font.Size - 0.5));
             useToMeasureLength.AutoSize = true;
             useToMeasureLength.BackColor = Color.White;
             useToMeasureLength.UseMnemonic = false;
@@ -133,7 +148,7 @@ namespace CustomUserControls.CalculatorTextBox
             };
             FontChanged += (sender, args) =>
             {
-                useToMeasureLength.Font = new Font(Font.Name, (float)(Font.Size - 0.6));
+                useToMeasureLength.Font = new Font(Font.Name, (float)(Font.Size - 0.5));
             };
             
             Controls.Add(verticalBar);
@@ -185,6 +200,8 @@ namespace CustomUserControls.CalculatorTextBox
                         useToMeasureLength.Text = Text.Substring(0, startIndex);
                         int startXOffset = useToMeasureLength.Width - 6 - 10;
                         int finalXOffset = realXOffset - startXOffset;
+
+                        //minus the "stick out" part
                         if (finalXOffset > Width - verticalBar.Width)
                         {
                             finalXOffset = Width - verticalBar.Width;

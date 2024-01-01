@@ -8,3 +8,5 @@ C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\De
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.csproj.CoreCompileInputs.cache
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.exe
 C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.pdb
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.MatrixCalculator.resources
+C:\Users\boygioi15\Desktop\Tai lieu cac mon hoc\Nam hai\GUI\ProCalculator\obj\Debug\ProCalculator.EquationSolving.resources

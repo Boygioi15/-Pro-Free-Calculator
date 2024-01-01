@@ -46,10 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorControls\MatrixCalculatorControl.cs" />
     <Compile Include="CalculatorControls\StandardCalculatorControl.cs" />
+    <Compile Include="ClassLibraries\Polynomial.cs" />
     <Compile Include="ClassLibraries\Expression.cs" />
     <Compile Include="ClassLibraries\MatrixExpression.cs" />
     <Compile Include="ClassLibraries\MyMatrix.cs" />
+    <Compile Include="CustomUserControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\MatrixOnDisplay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\ResultLogComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomUserControls\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -59,30 +70,49 @@
     <Compile Include="CustomUserControls\CalculatorTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="StandardCalculator.cs">
+    <Compile Include="Forms\EquationSolving.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StandardCalculator.Designer.cs">
+    <Compile Include="Forms\EquationSolving.Designer.cs">
+      <DependentUpon>EquationSolving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatrixCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatrixCalculator.Designer.cs">
+      <DependentUpon>MatrixCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StandardCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StandardCalculator.Designer.cs">
       <DependentUpon>StandardCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\EquationSolving.resx">
+      <DependentUpon>EquationSolving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatrixCalculator.resx">
+      <DependentUpon>MatrixCalculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="StandardCalculator.resx">
+    <EmbeddedResource Include="Forms\StandardCalculator.resx">
       <DependentUpon>StandardCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -93,7 +123,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\push-pin-with-decline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\push-pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del-icon60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon_dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

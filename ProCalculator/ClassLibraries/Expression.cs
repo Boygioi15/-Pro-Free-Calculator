@@ -4,19 +4,19 @@ using System;
 
 partial class Math
 {
-    public static long GCD(long  a, long  b)
+    public static long GCD(long a, long b)
     {
         while (b != 0)
         {
-            long  temp = b;
+            long temp = b;
             b = a % b;
             a = temp;
         }
         return a;
     }
-    public static long LCM(long  x, long  y)
+    public static long LCM(long x, long y)
     {
-        long  a;
+        long a;
         // a is greater number
         a = (x > y) ? x : y;
 
@@ -27,7 +27,7 @@ partial class Math
             ++a;
         }
     }
-    public static long Fact(long  n)
+    public static long Fact(long n)
     {
         if (n == 0)
         {
@@ -44,13 +44,13 @@ partial class Math
     {
         return n != 0 ? 0 : 1;
     }
-    public static double BitwiseNegate(long  n)
+    public static double BitwiseNegate(long n)
     {
         return ~n;
     }
     public static bool convertToBoolean(double d)
     {
-        long  i = (long)d;
+        long i = (long)d;
         if (d != i)
         {
             return false;
@@ -66,12 +66,12 @@ partial class Math
     }
     public static long Poly(long a, long b)
     {
-        long top = Fact(a), bot = Fact(a-b);
+        long top = Fact(a), bot = Fact(a - b);
         return top / bot;
     }
     public static long Comb(long a, long b)
     {
-        long top = Fact(a), bot = Fact(b)*Fact(a-b);
+        long top = Fact(a), bot = Fact(b) * Fact(a - b);
         return top / bot;
     }
 }
@@ -80,6 +80,8 @@ class Expression_Helper
     static public void init()
     {
         FunctionHeaders = new List<string> {
+                "!",
+
                 "sinh", "cosh", "tanh",
 
                 "asin","acos","atan",
@@ -109,7 +111,7 @@ class Expression_Helper
                 ">>", "<<"
             };
         List<string> Prior4 = new List<string>()
-            {  
+            {
                 "AND", "OR", "NOT",
                 "<=", ">=", "==", "!=","<", ">"
             };
@@ -285,7 +287,7 @@ abstract class BaseNode
         left = right = null;
         numberOfChild = 0;
     }
-    public abstract double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood);
+    public abstract double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood, bool unitForTrigonometryFunction);
 
 
 };
@@ -296,7 +298,7 @@ class NumberNode : BaseNode
         data = val;
         numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood, bool unitForTrigonometryFunction)
     {
         return data;
     }
@@ -309,7 +311,7 @@ class VariableNode : BaseNode
         variable = c;
         numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood, bool unitForTrigonometryFunction)
     {
         if (variablePair.ContainsKey(variable))
         {
@@ -327,17 +329,78 @@ class FunctionNode : BaseNode
         functionHeader = header;
         numberOfChild = 0;
     }
-    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood, bool unitForTrigonometryFunction)
     {
         if (numberOfChild == 1)
         {
-            double result = left.computeResult(variablePair, ref soFarSoGood);
-            if (functionHeader == "sin") return System.Math.Sin(result);
-            else if (functionHeader == "cos") return System.Math.Cos(result);
-            else if (functionHeader == "tan") return System.Math.Tan(result);
-            else if (functionHeader == "asin") return System.Math.Asin(result);
-            else if (functionHeader == "acos") return System.Math.Acos(result);
-            else if (functionHeader == "atan") return System.Math.Atan(result);
+            double result = left.computeResult(variablePair, ref soFarSoGood, unitForTrigonometryFunction);
+            double resultInRadian = result * (System.Math.PI / 180);
+            if (functionHeader == "sin")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Sin(resultInRadian);
+                }
+                else
+                {
+                    return System.Math.Sin(result);
+                }
+            }
+            else if (functionHeader == "cos")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Cos(resultInRadian);
+                }
+                else
+                {
+                    return System.Math.Cos(result);
+                }
+            }
+            else if (functionHeader == "tan")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Tan(resultInRadian);
+                }
+                else
+                {
+                    return System.Math.Tan(result);
+                }
+            }
+            else if (functionHeader == "asin")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Asin(result) * (System.Math.PI / 180);
+                }
+                else
+                {
+                    return System.Math.Asin(result);
+                }
+            }
+            else if (functionHeader == "acos")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Acos(result) * (System.Math.PI / 180);
+                }
+                else
+                {
+                    return System.Math.Acos(result);
+                }
+            }
+            else if (functionHeader == "atan")
+            {
+                if (!unitForTrigonometryFunction)
+                {
+                    return System.Math.Atan(result) * (System.Math.PI / 180);
+                }
+                else
+                {
+                    return System.Math.Atan(result);
+                }
+            }
             else if (functionHeader == "sinh") return System.Math.Sinh(result);
             else if (functionHeader == "cosh") return System.Math.Cosh(result);
             else if (functionHeader == "tanh") return System.Math.Tanh(result);
@@ -357,7 +420,7 @@ class FunctionNode : BaseNode
 
             }
             else if (functionHeader == "abs") return System.Math.Abs(result);
-            
+
 
             int iResult = (int)result;
             if (iResult != result)
@@ -368,12 +431,12 @@ class FunctionNode : BaseNode
 
             else if (functionHeader == "NOT") return Math.NOT(iResult);
             else if (functionHeader == "~") return Math.BitwiseNegate(iResult);
-            else if (functionHeader == "fact") return Math.Fact(iResult);
+            else if (functionHeader == "fact"|| functionHeader == "!") return Math.Fact(iResult);
         }
         else if (numberOfChild == 2)
         {
-            double result1 = left.computeResult(variablePair, ref soFarSoGood);
-            double result2 = right.computeResult(variablePair, ref soFarSoGood);
+            double result1 = left.computeResult(variablePair, ref soFarSoGood, unitForTrigonometryFunction);
+            double result2 = right.computeResult(variablePair, ref soFarSoGood, unitForTrigonometryFunction);
             if (functionHeader == "log") return System.Math.Log(result2, result1);
 
             int iResult1 = (int)result1;
@@ -400,7 +463,7 @@ class FunctionNode : BaseNode
             }
             else if (functionHeader == "poly")
             {
-                if(iResult1<=0 || iResult2 <= 0 || iResult1 < iResult2)
+                if (iResult1 <= 0 || iResult2 <= 0 || iResult1 < iResult2)
                 {
                     soFarSoGood = false;
                     return -1;
@@ -429,10 +492,10 @@ class OperatorNode : BaseNode
     {
         oper = c;
     }
-    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood)
+    override public double computeResult(Dictionary<char, double> variablePair, ref bool soFarSoGood, bool unitForTrigonometryFunction)
     {
-        double leftResult = left.computeResult(variablePair, ref soFarSoGood);
-        double rightResult = right.computeResult(variablePair, ref soFarSoGood);
+        double leftResult = left.computeResult(variablePair, ref soFarSoGood, unitForTrigonometryFunction);
+        double rightResult = right.computeResult(variablePair, ref soFarSoGood, unitForTrigonometryFunction);
         //normal op
         if (oper == "+")
         {
@@ -539,9 +602,9 @@ class Expression_BinaryTree
     {
         buildTreeFromExpression_Helper(ref root, s, variablePair);
     }
-    public double computeResult(Dictionary<char, double> variablePair)
+    public double computeResult(Dictionary<char, double> variablePair, bool unitForTrigonometryFunction)
     {
-        return root.computeResult(variablePair, ref computedSucceeded);
+        return root.computeResult(variablePair, ref computedSucceeded, unitForTrigonometryFunction);
     }
 
     public bool isEmpty()
@@ -571,7 +634,7 @@ class Expression_BinaryTree
         {
             return;
         }
-        Console.WriteLine("Working with: {0}",s);
+        //Console.WriteLine("Working with: {0}",s);
         //remove extra bracket
         while (Expression_Helper.peelOffExtraBracket(ref s)) ;
 
@@ -590,8 +653,17 @@ class Expression_BinaryTree
                 return;
             }
         }
-
         //check for function header
+        //special case for !
+        if (s[s.Length - 1] == '!')
+        {
+            root = new FunctionNode("!");
+            s = s.Substring(0,s.Length - 1);
+            while (Expression_Helper.peelOffExtraBracket(ref s)) ;
+            root.numberOfChild = 1;
+            buildTreeFromExpression_Helper(ref root.left, s, variablePairs);
+            return;
+        }
         string header = Expression_Helper.getFunctionHeader(s);
         if (header != "NONE")
         {
@@ -680,6 +752,9 @@ class Expression
         eB = new Expression_BinaryTree();
         convertingRules.Add("e", "2.718281828");
         convertingRules.Add("pi", "3.141592654");
+        convertingRules.Add("π", "3.141592654");
+        convertingRules.Add("√", "sqrt");
+        convertingRules.Add("log", "log10");
         convertingRules.Add("-", "+(-1)*");
     }
     //built-in function supported
@@ -739,7 +814,7 @@ class Expression
             //error log
             return -1;
         }
-        return eB.computeResult(variablePairs);
+        return eB.computeResult(variablePairs, unitForTrigonometryFunction);
     }
 
     //get, set methods
@@ -759,6 +834,7 @@ class Expression
 
     //private
     //friend class Expression_BinaryTree;
+    public bool unitForTrigonometryFunction = false;
     public string expression;
     Expression_BinaryTree eB;
 

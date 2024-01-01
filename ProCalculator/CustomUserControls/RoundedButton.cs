@@ -7,97 +7,163 @@ using System;
 using ProCalculator.ClassLibraries;
 namespace CustomUserControls.RoundedButton
 {
-    partial class RoundedButton : Panel
+    partial class RoundedButton : RoundedPanel.RoundedPanel
     {
+     
+        /// <Button behavior>
+        /// 
+        /// </summary>
+        Color _mouseHoveringBackColor = Color.DimGray;
+        Color _mouseClickBackColor = Color.Gray;
 
-        public bool whatToDisplay = false; //false: matrix, true: number
-        int _borderWidth = 3;
-        Color _borderColor = Color.Black;
-        Color _interiorColor = Color.White;
-        int _arcSize = 15;
-
-        //only use odd number for consistency
-        [Category("Border")]
-        public int BorderWidth
+        bool _mouseIsHovering = false;
+        bool _mouseIsHolding = false;
+        /// <Text>
+        /// 
+        /// </Text>
+        Label buttonLabel;
+        [Category("Behavior")]
+        public Color MouseHoveringBackColor
         {
-            get { return _borderWidth; }
+            get
+            {
+                return _mouseHoveringBackColor;
+            }
+            set{
+                if (value != _mouseHoveringBackColor)
+                {
+                    _mouseHoveringBackColor = value;
+                    Invalidate();
+                }
+            }
+        }
+        [Category("Behavior")]
+        public Color MouseClickBackColor
+        {
+            get
+            {
+                return _mouseClickBackColor;
+            }
             set
             {
-                if (value != _borderWidth)
+                if (value != _mouseClickBackColor)
                 {
-                    if (value < 1)
+                    _mouseClickBackColor = value;
+                    Invalidate();
+                }
+            }
+        }
+        [Category("Text")]
+        public string TextContent
+        {
+            get { return buttonLabel.Text; }
+            set
+            {
+                if (value != buttonLabel.Text)
+                {
+                    if (value != string.Empty)
                     {
-                        _borderWidth = 1;
+                        buttonLabel.Text = value;
                     }
-                    _borderWidth = value;
-                    Invalidate();
                 }
             }
         }
-        [Category("Border")]
-        public Color BorderColor
+        [Category("Text")]
+        public Color TextColor
         {
-            get { return _borderColor; }
+            get { return buttonLabel.ForeColor; }
             set
             {
-                if (value != _borderColor)
+                if (value != buttonLabel.ForeColor)
                 {
-                    _borderColor = value;
-                    Invalidate();
+                    buttonLabel.ForeColor = value;
                 }
             }
         }
-        [Category("Border")]
-        public Color InteriorColor
+        [Category("Text")]
+        public Font TextFont
         {
-            get { return _interiorColor; }
+            get { return buttonLabel.Font; }
             set
             {
-                if (value != _interiorColor)
+                if (value != buttonLabel.Font)
                 {
-                    _interiorColor = value;
-                    Invalidate();
-                }
-            }
-        }
-        [Category("Border")]
-        public int ArcSize
-        {
-            get { return _arcSize; }
-            set
-            {
-                if (value != _arcSize)
-                {
-                    if (value < 1)
+                    if (value != null)
                     {
-                        _arcSize = 1;
+                        buttonLabel.Font = value;
                     }
-                    _arcSize = value;
-                    Invalidate();
+                }
+            }
+        }
+        [Category("Text")]
+        public ContentAlignment TextAlignment
+        {
+            get { return buttonLabel.TextAlign; }
+            set
+            {
+                if (value != buttonLabel.TextAlign)
+                {
+                    buttonLabel.TextAlign = value;
                 }
             }
         }
         public RoundedButton()
         {
             DoubleBuffered = true;
+
+            buttonLabel = new Label();
+            buttonLabel.AutoSize = false;
+            buttonLabel.TextAlign = ContentAlignment.MiddleCenter;
+            buttonLabel.SendToBack();
+            buttonLabel.BackColor = Color.Transparent;
+            updateLabel();
+
+            buttonLabel.MouseDown += (sender, args) =>
+            {
+                _mouseIsHolding = true;
+                base.OnMouseDown(args);
+                base.OnClick(args);
+                Invalidate();
+            };
+            buttonLabel.MouseUp += (sender, args) =>
+            {
+                _mouseIsHolding = false;
+                base.OnMouseUp(args);
+                Invalidate();
+            };
+            buttonLabel.MouseLeave += (sender, args) =>
+            {
+                base.OnMouseLeave(args);
+                _mouseIsHovering = false;
+                Invalidate();
+            };
+            buttonLabel.MouseEnter += (sender, args) =>
+            {
+                base.OnMouseEnter(args);
+                _mouseIsHovering = true;
+                Invalidate();
+            };
+            Controls.Add(buttonLabel);
         }
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            Width = 600;
-        }
-        protected override void OnBackColorChanged(EventArgs e)
-        {
-            base.OnBackColorChanged(e);
-            BackColor = Color.Transparent;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
             
             Graphics g = e.Graphics;
-
+            Color backgroundColor = InteriorColor;
+            if (_mouseIsHolding)
+            {
+                backgroundColor = MouseClickBackColor;
+            }
+            else if(_mouseIsHovering)
+            {
+                backgroundColor = MouseHoveringBackColor;
+            }
             //fill inside
-            SolidBrush b = new SolidBrush(InteriorColor);
+            SolidBrush b = new SolidBrush(backgroundColor);
 
             Rectangle mainRect = new Rectangle(ArcSize, 0, Width - 2 * ArcSize, Height);
             Rectangle leftRect = new Rectangle(0, ArcSize, ArcSize, Height - 2 * ArcSize);
@@ -118,7 +184,10 @@ namespace CustomUserControls.RoundedButton
             g.FillEllipse(b, ArcBotRight);
 
             //draw border
-
+            if(BorderWidth == 0)
+            {
+                return;
+            }
             Pen p = new Pen(BorderColor, _borderWidth);
             g.SmoothingMode = SmoothingMode.AntiAlias;
             //draw Border;
@@ -148,13 +217,28 @@ namespace CustomUserControls.RoundedButton
 
         }
 
-        protected override void OnLocationChanged(EventArgs e)
+        protected override void OnBackColorChanged(EventArgs e)
         {
-            base.OnLocationChanged(e);
+            base.OnBackColorChanged(e);
+            BackColor = Color.Transparent;
         }
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
+            this.Invalidate();
+            updateLabel();
+        }
+        protected override void OnLocationChanged(EventArgs e)
+        {
+            base.OnLocationChanged(e);
+            this.Invalidate();
+        }
+
+        private void updateLabel()
+        {
+            buttonLabel.Width = Width;
+            buttonLabel.Height = Height;
+            buttonLabel.Location = new Point(0, 0);
         }
     }
 }
