@@ -11,7 +11,8 @@ In this project, in short, we have done:
 Our expression evaluation algorithm can: 
 - Evaluate expression with operators and parentheses, like 3+2, 3+(2*5)/2...
 - Evaluate expression with functions, like sin(3+2), log(sin(3+2),10)...
-- Variable assignment, like sin(x) with x = 90. 
+- Variable assignment, like sin(x) with x = 90.
+- We even extended it to work with matrix operations.
 
 Main functionalities of our calculator: 
  - Functionalities : evaluating expression, work with matrix, solve equation with "n" variables. 
