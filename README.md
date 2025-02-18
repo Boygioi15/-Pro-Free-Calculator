@@ -1,5 +1,4 @@
 ## Hi there 👋
-Welcome to our site!
 ### Main idea
 The main idea was we want to build a calculator that is suitable for multitask and yet still able to evaluate complicated expressions. On the market, there is casio simulator, but it cost money, and window calculator isn't able to compute complicated expression - thus the idea was born. 
 ### Functionalities
