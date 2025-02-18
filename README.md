@@ -1,6 +1,6 @@
 ## Hi there 👋
 ### Main idea
-The main idea was we want to build a calculator that is suitable for multitask and yet still able to evaluate complicated expressions. On the market, there is casio simulator, but it cost money, and window calculator isn't able to compute complicated expression - thus the idea was born. 
+The main idea was we want to build a calculator that is suitable for multitask and yet still able to evaluate complicated expressions. On the market, there is casio simulator, but it cost money, and window calculator isn't able to compute complicated expression - thus Multi-calculator was born. 
 ### Functionalities
 This project is a collaboration between me and Kiet Tran and it was done in our 3rd term
 In this project, in short, we have done: 
